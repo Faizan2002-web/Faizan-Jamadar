@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Faizan Jamadar | Marketing Portfolio</title>
+<title>Faizan Jamadar | Portfolio</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
@@ -11,11 +11,33 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
-    background: #0f172a;
+    background: linear-gradient(135deg, #0f172a, #020617);
     color: white;
     scroll-behavior: smooth;
 }
 
+/* NAVBAR */
+nav {
+    position: sticky;
+    top: 0;
+    background: rgba(2,6,23,0.9);
+    padding: 15px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+nav a {
+    margin: 0 15px;
+    color: #38bdf8;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+nav a:hover {
+    color: white;
+}
+
+/* HEADER */
 header {
     text-align: center;
     padding: 80px 20px;
@@ -30,15 +52,13 @@ header img {
     object-fit: cover;
     object-position: 50% 30%;
     box-shadow: 0 0 25px rgba(56,189,248,0.6);
-    transition: transform 0.4s ease;
+    transition: 0.4s;
 }
-
 header img:hover {
-    transform: scale(1.08);
+    transform: scale(1.1);
 }
 
-h1 { margin: 10px 0; }
-
+/* BUTTON */
 .btn {
     display: inline-block;
     margin-top: 20px;
@@ -47,171 +67,135 @@ h1 { margin: 10px 0; }
     background: linear-gradient(45deg, #38bdf8, #0ea5e9);
     color: white;
     text-decoration: none;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
-
 .btn:hover {
-    transform: translateY(-3px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(56,189,248,0.5);
+    transform: scale(1.05);
+    box-shadow: 0 0 20px #38bdf8;
 }
 
+/* SECTION */
 section {
     max-width: 900px;
     margin: auto;
     padding: 40px 20px;
 }
 
+/* CARD */
 .card {
     background: #1e293b;
     padding: 25px;
     border-radius: 14px;
     margin-bottom: 25px;
     opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.8s ease;
+    transform: translateY(40px);
+    transition: 0.7s;
 }
-
 .card.show {
     opacity: 1;
     transform: translateY(0);
 }
 
-ul {
-    padding-left: 20px;
+/* FORM */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 8px;
+    border: none;
 }
 
-a {
-    color: #38bdf8;
+button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #38bdf8;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+button:hover {
+    background: white;
+    color: black;
 }
 
+/* ANIMATION */
 @keyframes fadeDown {
-    from {
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+    from {opacity:0; transform:translateY(-40px);}
+    to {opacity:1; transform:translateY(0);}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <img src="https://media.licdn.com/dms/image/v2/D4D03AQF1kQ2uROfhLw/profile-displayphoto-shrink_400_400/B4DZQnzcW7HwAk-/0/1735834585578?e=1776297600&v=beta&t=AYsix825Iu-VimWmAkBxHJHAEwT3Ymrj-q9emQNFsVI" alt="Faizan Jamadar">
+<!-- NAVBAR -->
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<!-- HEADER -->
+<header id="home">
+    <img src="https://media.licdn.com/dms/image/v2/D4D03AQF1kQ2uROfhLw/profile-displayphoto-shrink_400_400/B4DZQnzcW7HwAk-/0/1735834585578?e=1776297600&v=beta&t=AYsix825Iu-VimWmAkBxHJHAEwT3Ymrj-q9emQNFsVI">
     <h1>Faizan Jamadar</h1>
     <p>Marketing Executive | Branding | Lead Generation</p>
 
     <a href="https://faizan-cv-2025.tiiny.site" target="_blank" class="btn">
-        📄 Download My CV
+        📄 Download CV
     </a>
 </header>
 
 <section>
 
 <!-- ABOUT -->
-<div class="card">
+<div class="card" id="about">
     <h2>About Me</h2>
-    <p>
-        I am a results-driven marketing professional with experience in digital marketing,
-        branding, exhibitions, and lead generation. I specialize in executing campaigns,
-        managing vendors, and improving business visibility through data-driven strategies.
-    </p>
+    <p>Marketing professional specializing in digital campaigns, branding & lead generation.</p>
 </div>
 
 <!-- EXPERIENCE -->
-<div class="card">
+<div class="card" id="experience">
     <h2>Experience</h2>
-
-    <p><b>Digital Marketing Executive</b></p>
-    <p>Bhoomi Process Management Pvt Ltd</p>
-    <p>Nov 2025 – Present | Mumbai</p>
-    <ul>
-        <li>Managing digital ads (Google & Facebook Ads)</li>
-        <li>Email marketing & automation</li>
-        <li>Lead generation & client acquisition</li>
-        <li>Handling B2B portals</li>
-        <li>WhatsApp marketing</li>
-        <li>Exhibition marketing support</li>
-    </ul>
-
-    <br>
-
-    <p><b>Marketing Executive</b></p>
-    <p>Electrolab Group</p>
-    <p>Jul 2024 – Nov 2025 | Navi Mumbai</p>
-    <ul>
-        <li>Executed marketing campaigns</li>
-        <li>Worked on SEO & social media</li>
-        <li>Tools: SEMrush, Ahrefs, HubSpot</li>
-        <li>Handled ads & WhatsApp marketing</li>
-        <li>Organized exhibitions</li>
-        <li>Vendor & branding management</li>
-    </ul>
-
-    <br>
-
-    <p><b>Marketing Intern</b></p>
-    <p>TDF – Diamonds & Gold</p>
-    <p>May 2023 – Jun 2023 | Mumbai</p>
-    <ul>
-        <li>Market research</li>
-        <li>Brand promotion</li>
-        <li>Campaign support</li>
-    </ul>
+    <p><b>Digital Marketing Executive</b> – Bhoomi Process Management Pvt Ltd</p>
+    <p><b>Marketing Executive</b> – Electrolab Group</p>
 </div>
 
 <!-- SKILLS -->
-<div class="card">
+<div class="card" id="skills">
     <h2>Skills</h2>
     <ul>
-        <li>SEO & Digital Marketing</li>
-        <li>Google Ads & Facebook Ads</li>
-        <li>Email Marketing</li>
+        <li>SEO</li>
+        <li>Google Ads</li>
         <li>Lead Generation</li>
-        <li>WhatsApp Marketing</li>
-        <li>B2B Portals</li>
-        <li>Branding & Strategy</li>
-        <li>Exhibition Management</li>
-        <li>Content Marketing</li>
+        <li>Branding</li>
     </ul>
 </div>
 
-<!-- ACHIEVEMENT -->
-<div class="card">
-    <h2>Achievement</h2>
-    <p>Certificate of Appreciation from Electrolab for:</p>
-    <ul>
-        <li>Improving SEO performance</li>
-        <li>Increasing lead generation</li>
-        <li>Enhancing marketing campaigns</li>
-        <li>Supporting business growth</li>
-    </ul>
-</div>
+<!-- CONTACT FORM -->
+<div class="card" id="contact">
+    <h2>Contact Me</h2>
 
-<!-- CONTACT -->
-<div class="card">
-    <h2>Contact</h2>
-    <a href="https://www.linkedin.com/in/faizan-jamadar-9b6297241/" target="_blank">
-        View LinkedIn
-    </a>
+    <form action="https://formspree.io/f/mojpjyez" method="POST">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
 </div>
 
 </section>
 
 <script>
 const cards = document.querySelectorAll('.card');
-
 window.addEventListener('scroll', () => {
-    const triggerBottom = window.innerHeight * 0.85;
-
+    const trigger = window.innerHeight * 0.85;
     cards.forEach(card => {
-        const cardTop = card.getBoundingClientRect().top;
-
-        if (cardTop < triggerBottom) {
+        if(card.getBoundingClientRect().top < trigger){
             card.classList.add('show');
         }
     });
